@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/L3_3d.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3d_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_10.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_11.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_12.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_13.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_14.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_15.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_16.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_17.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_18.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_19.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_2.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_20.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_4.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_6.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_7.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_8.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_9.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/DepthMap_Test.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/read_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="34q1eIcunYzD8znPDKGfQgPOTCh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "Python.read_file.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
+    "Python.test4.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/filolio/PycharmProjects/L3_3d",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-348a24fa61fa-5312c7369657-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="" />
+      <created>1761926381300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761926381300</updated>
+    </task>
+    <servers />
+  </component>
+</project>
