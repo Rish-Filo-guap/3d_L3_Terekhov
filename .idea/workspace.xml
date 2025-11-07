@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="что-то есть">
+    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="проверяем">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4.py" beforeDir="false" afterPath="$PROJECT_DIR$/test4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.ImageTest.executor": "Run",
     "Python.main.executor": "Run",
     "Python.read_file.executor": "Run",
     "Python.test.executor": "Run",
@@ -74,11 +79,20 @@
       <option name="project" value="LOCAL" />
       <updated>1762305997347</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="проверяем">
+      <option name="closed" value="true" />
+      <created>1762306729458</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762306729458</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="что-то есть" />
-    <option name="LAST_COMMIT_MESSAGE" value="что-то есть" />
+    <MESSAGE value="проверяем" />
+    <option name="LAST_COMMIT_MESSAGE" value="проверяем" />
   </component>
 </project>

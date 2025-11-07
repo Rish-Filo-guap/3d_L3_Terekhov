@@ -77,7 +77,7 @@ def create_grayscale_bmp(depth_array, output_filename):
 
 # Основная функция
 def main():
-    input_file = "files/DepthMap_6.dat"  # Замените на путь к вашему файлу
+    input_file = "files/DepthMap_14.dat"  # Замените на путь к вашему файлу
     output_color = "depth_color.bmp"
     output_grayscale = "depth_grayscale.bmp"
 

@@ -220,7 +220,7 @@ def display_camera_info(camera):
 
 
 def main():
-    rf = ReadFile("files/DepthMap_6.dat")
+    rf = ReadFile("files/DepthMap_4.dat")
     points = rf.read_dat_file()
     if(points==False):
         return

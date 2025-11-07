@@ -86,9 +86,9 @@ class Points:
             for i,pol in enumerate(two_polygons):
                 vert.append(pol.get_point())
                 if(i/3>=1):
-                    colors.append([pol.z*(1/depth),1,pol.z*(1/depth)])
+                    colors.append([pol.z*(1/depth)-0.3,1,pol.z*(1/depth)-0.3])
                 else:
-                    colors.append([1,pol.z*(1/depth),pol.z*(1/depth)])
+                    colors.append([1,pol.z*(1/depth)-0.3,pol.z*(1/depth)-0.3])
             two_polygons = self.get_points_from_window()
         return vert, colors
 

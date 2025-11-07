@@ -1,4 +1,3 @@
-import time
 
 import numpy as np
 import pygame
@@ -146,7 +145,7 @@ def main():
 
 
     pygame.init()
-    display = (1600, 1200)
+    display = (1200, 800)
     pygame.display.set_mode(display, pygame.locals.DOUBLEBUF | pygame.locals.OPENGL)
     pygame.display.set_caption("Управление камерой")
 
@@ -175,6 +174,29 @@ def main():
 
         # Применяем трансформации камеры
         camera.apply_transform()
+
+        glEnable(GL_LIGHTING)
+        # glEnable(GL_LIGHT0)
+        glEnable(GL_LIGHT1)
+        glEnable(GL_LIGHT2)
+        light_pos = [1, 1, 1, 0.0]
+
+        lamp_position = [-1, -1, -1, 1.0]  # Позиция
+        lamp_position2 = [1, 1, 1, 1.0]  # Позиция
+        lamp_diffuse = [0.9, 0.9, 0.6, 1.0]  # Теплый свет
+        lamp_diffuse2 = [0.6, 0.9, 0.9, 1.0]  # Теплый свет
+        lamp_specular = [1.0, 1.0, 0.8, 1.0]
+        lamp_specular2 = [1.0, 1.0, 0.8, 1.0]
+
+        glLightfv(GL_LIGHT1, GL_POSITION, lamp_position)
+        glLightfv(GL_LIGHT2, GL_POSITION, lamp_position2)
+        glLightfv(GL_LIGHT1, GL_DIFFUSE, lamp_diffuse)
+        glLightfv(GL_LIGHT2, GL_DIFFUSE, lamp_diffuse2)
+        glLightfv(GL_LIGHT1, GL_SPECULAR, lamp_specular)
+        glLightfv(GL_LIGHT2, GL_SPECULAR, lamp_specular2)
+
+
+        # glLightfv(GL_LIGHT0, GL_POSITION, light_pos)
 
         # Рисуем сцену
         draw_grid()
