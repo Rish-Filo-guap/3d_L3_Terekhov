@@ -74,7 +74,7 @@ class Points:
         vert=[]
         colors=[]
 
-        depth = 0
+        depth = 1
         for i in range(self.height):
             for j in range(self.width):
                 if (self.points[i][j].z > depth):
@@ -88,7 +88,8 @@ class Points:
                 if(i/3>=1):
                     colors.append([pol.z*(1/depth)-0.3,1,pol.z*(1/depth)-0.3])
                 else:
-                    colors.append([1,pol.z*(1/depth)-0.3,pol.z*(1/depth)-0.3])
+                    # colors.append([1,pol.z*(1/depth)-0.3,pol.z*(1/depth)-0.3])
+                    colors.append([pol.z*(1/depth)-0.3,1,pol.z*(1/depth)-0.3])
             two_polygons = self.get_points_from_window()
         return vert, colors
 
@@ -116,7 +117,7 @@ class ReadFile:
                         bytes_data = file.read(8)
                         if len(bytes_data) < 8:
                             raise ValueError("Недостаточно данных в файле")
-                        value = struct.unpack('d', bytes_data)[0]
+                        value = -struct.unpack('d', bytes_data)[0]
                         row.append(Point(j,i,value))
                     point_arr.append(row)
 
@@ -146,7 +147,7 @@ class ReadFile:
                         bytes_data = file.read(8)
                         if len(bytes_data) < 8:
                             raise ValueError("Недостаточно данных в файле")
-                        value = struct.unpack('d', bytes_data)[0]
+                        value = -struct.unpack('d', bytes_data)[0]
                         row.append(value)
                     points_arr.append(row)
 

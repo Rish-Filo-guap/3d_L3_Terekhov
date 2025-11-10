@@ -1,3 +1,4 @@
+import math
 
 import numpy as np
 import pygame
@@ -126,14 +127,67 @@ def display_camera_info(camera):
     pygame.display.set_caption(info)
 
 
+def calculate_normal(vertex1, vertex2, vertex3):
+    """
+    Вычисление нормали треугольника по трем вершинам
+    используя векторное произведение
+    """
+    # Векторы сторон треугольника
+    u = [vertex2[0] - vertex1[0], vertex2[1] - vertex1[1], vertex2[2] - vertex1[2]]
+    v = [vertex3[0] - vertex1[0], vertex3[1] - vertex1[1], vertex3[2] - vertex1[2]]
+
+    # Векторное произведение u x v
+    normal = [
+        u[1] * v[2] - u[2] * v[1],  # x
+        u[2] * v[0] - u[0] * v[2],  # y
+        u[0] * v[1] - u[1] * v[0]  # z
+    ]
+
+    # Нормализуем вектор
+    length = math.sqrt(normal[0] ** 2 + normal[1] ** 2 + normal[2] ** 2)
+    if length > 0:
+        normal = [normal[0] / length, normal[1] / length, normal[2] / length]
+
+    return normal
+
+
+def write_ascii_stl_with_normals(filename, vert, object_name="object"):
+    """
+    Запись STL файла в ASCII формате с расчетом нормалей
+    meshes - список мешей, каждый меш - список треугольников
+    """
+    with open(filename, 'w') as f:
+        f.write(f"solid {object_name}\n\n")
+        i=0
+        while i< (len(vert)-6):
+            normal=[]
+            normal.append(calculate_normal(vert[i],vert[i+1],vert[i+2]))
+            normal.append(calculate_normal(vert[i+3],vert[i+4],vert[i+5]))
+            for k in range(2):
+                f.write(f"  facet normal {normal[k][0]} {normal[k][1]} {normal[k][2]}\n")
+                # f.write(f"  facet normal -1.0 0 0\n")
+                f.write("    outer loop\n")
+
+                for j in range(3):
+                    f.write(f"      vertex {vert[3*k+j+i][0]} {vert[3*k+j+i][1]} {vert[3*k+j+i][2]}\n")
+                    # print(3*k+j+i)
+
+                f.write("    endloop\n")
+                f.write("  endfacet\n\n")
+            i+=6
+
+
+        f.write(f"endsolid {object_name}")
+
+
 def main():
-    rf = ReadFile("files/DepthMap_Test.dat")
+    rf = ReadFile("files/DepthMap_5.dat")
     points = rf.read_dat_file()
     if(points==False):
         return
-    points.move_to_center()
-    points.norm_points()
-    points.zoom_points(4)
+    # points.move_to_center()
+    # points.norm_points()
+    # points.zoom_points(4)
     data, width, height=rf.read_dat_file2()
     print("123")
     vert, colors=points.get_vert_colors()
@@ -142,7 +196,7 @@ def main():
     vbo_p = vbo.VBO(vertices)
     vbo_c=vbo.VBO(colors)
     print(len(vertices))
-
+    write_ascii_stl_with_normals("stl/file.stl", vert)
 
     pygame.init()
     display = (1200, 800)
@@ -175,14 +229,14 @@ def main():
         # Применяем трансформации камеры
         camera.apply_transform()
 
-        glEnable(GL_LIGHTING)
+        # glEnable(GL_LIGHTING)
         # glEnable(GL_LIGHT0)
-        glEnable(GL_LIGHT1)
-        glEnable(GL_LIGHT2)
+        # glEnable(GL_LIGHT1)
+        # glEnable(GL_LIGHT2)
         light_pos = [1, 1, 1, 0.0]
 
-        lamp_position = [-1, -1, -1, 1.0]  # Позиция
-        lamp_position2 = [1, 1, 1, 1.0]  # Позиция
+        lamp_position = [-100, -100, 0, 1.0]  # Позиция
+        lamp_position2 = [0, 100, 100, 1.0]  # Позиция
         lamp_diffuse = [0.9, 0.9, 0.6, 1.0]  # Теплый свет
         lamp_diffuse2 = [0.6, 0.9, 0.9, 1.0]  # Теплый свет
         lamp_specular = [1.0, 1.0, 0.8, 1.0]
