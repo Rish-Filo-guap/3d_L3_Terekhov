@@ -77,28 +77,29 @@ def create_grayscale_bmp(depth_array, output_filename):
 
 # Основная функция
 def main():
-    input_file = "files/DepthMap_14.dat"  # Замените на путь к вашему файлу
-    output_color = "depth_color.bmp"
-    output_grayscale = "depth_grayscale.bmp"
+    for i in range(1,20):
+        input_file = "files/DepthMap_"+str(i)+".dat"  # Замените на путь к вашему файлу
+        output_color = "depth_color/Map_"+str(i)+".bmp"
+        output_grayscale = "depth_grayscale/Map_"+str(i)+".bmp"
 
-    try:
-        # Читаем данные из файла
-        depth_array = read_dat_file(input_file)
+        try:
+            # Читаем данные из файла
+            depth_array = read_dat_file(input_file)
 
-        print(f"Диапазон значений глубины: {np.min(depth_array):.4f} - {np.max(depth_array):.4f}")
+            print(f"Диапазон значений глубины: {np.min(depth_array):.4f} - {np.max(depth_array):.4f}")
 
-        # Создаем цветное изображение
-        create_depth_bmp(depth_array, output_color, 'viridis')
+            # Создаем цветное изображение
+            create_depth_bmp(depth_array, output_color, 'viridis')
 
-        # Создаем черно-белое изображение
-        create_grayscale_bmp(depth_array, output_grayscale)
+            # Создаем черно-белое изображение
+            create_grayscale_bmp(depth_array, output_grayscale)
 
-        print("Обработка завершена успешно!")
+            print("Обработка завершена успешно!")
 
-    except FileNotFoundError:
-        print(f"Ошибка: Файл {input_file} не найден")
-    except Exception as e:
-        print(f"Ошибка при обработке файла: {e}")
+        except FileNotFoundError:
+            print(f"Ошибка: Файл {input_file} не найден")
+        except Exception as e:
+            print(f"Ошибка при обработке файла: {e}")
 
 
 if __name__ == "__main__":

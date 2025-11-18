@@ -4,10 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="проверяем">
+    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="начала экспорта">
+      <change afterPath="$PROJECT_DIR$/Export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_1.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_10.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_11.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_12.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_13.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_14.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_15.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_16.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_17.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_18.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_19.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_2.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_3.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_4.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_5.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_6.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_7.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_8.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_color/Map_9.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_1.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_10.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_11.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_12.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_13.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_14.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_15.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_16.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_17.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_18.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_19.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_2.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_3.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_4.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_5.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_6.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_7.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_8.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_9.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test4.py" beforeDir="false" afterPath="$PROJECT_DIR$/test4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test4.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +69,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Rish-Filo-guap"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Rish-Filo-guap/3d_L3.git",
+    "accountId": "70992498-ec15-4d15-86b9-3b4f0444d1ff"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -32,23 +89,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.ImageTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.read_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test4.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/filolio/PycharmProjects/L3_3d&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.ImageTest.executor": "Run",
+    "Python.Object.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.read_file.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
+    "Python.test4.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/filolio/PycharmProjects/L3_3d",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -85,12 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1762306729458</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="начала экспорта">
+      <option name="closed" value="true" />
+      <created>1762818491346</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762818491346</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="что-то есть" />
     <MESSAGE value="проверяем" />
-    <option name="LAST_COMMIT_MESSAGE" value="проверяем" />
+    <MESSAGE value="начала экспорта" />
+    <option name="LAST_COMMIT_MESSAGE" value="начала экспорта" />
   </component>
 </project>
