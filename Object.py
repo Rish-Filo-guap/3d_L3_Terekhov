@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 
 class Point:
@@ -32,8 +33,8 @@ class Points:
         self.depth=0
         for i in range(self.height):
             for j in range(self.width):
-                if (self.points[i][j].z > self.depth):
-                    self.depth = self.points[i][j].z
+                if (abs(self.points[i][j].z) > self.depth):
+                    self.depth = abs(self.points[i][j].z)
 
     def _start_window(self):
         self.i = 0
@@ -47,13 +48,14 @@ class Points:
             return False
         else:
             res=None
-            # print(self.width,len(self.points[0]), self.j, self.height,len(self.points), self.i)
+            # проверка, являются ли точки окна частью объекта
             if (self.points[self.i][self.j].z != 0 and self.points[self.i + 1][self.j + 1].z != 0 and self.points[self.i + 1][self.j].z != 0 and self.points[self.i][self.j + 1].z != 0):
                 res=[self.points[self.i][self.j], self.points[self.i+1][self.j], self.points[self.i][self.j+1],
                         self.points[self.i+1][self.j], self.points[self.i+1][self.j+1], self.points[self.i][self.j+1]]
             self.j+=1
             return res
-    def get_points_from_window(self):
+
+    def _get_points_from_window(self):
         while (True):
             tmp=self._move_window()
             if(tmp!=None):
@@ -65,15 +67,18 @@ class Points:
         for i in range(self.height):
             for j in range(self.width):
                 self.points[i][j].zoom(k)
+
     def move_points(self, point):
         for i in range(self.height):
             for j in range(self.width):
                 self.points[i][j].move(point)
+
     def norm_points(self):
         max_v=max(self.depth, self.width, self.height)
         if(max_v>1):
             self.zoom_points(1/max_v)
         print("norm_zoom= "+ str(max_v)+" "+str(1/max_v))
+
     def move_to_center(self):
         self.move_points(Point(-self.width/2, -self.height/2, -self.depth/2))
 
@@ -88,7 +93,6 @@ class Points:
             u[0] * v[1] - u[1] * v[0]  # z
         ]
 
-        # Нормализуем вектор
         length = math.sqrt(normal[0] ** 2 + normal[1] ** 2 + normal[2] ** 2)
         if length > 0:
             normal = [normal[0] / length, -normal[1] / length, -normal[2] / length]
@@ -99,18 +103,22 @@ class Points:
         self.normal = []
 
         self._start_window()
-        two_polygons = self.get_points_from_window()
+        two_polygons = self._get_points_from_window()
         while two_polygons != False:
+            # нормали двух полигонов
             firnormal=self._calculate_normal(two_polygons[0].get_point(), two_polygons[1].get_point(),two_polygons[2].get_point())
             secnormal=self._calculate_normal(two_polygons[3].get_point(), two_polygons[4].get_point(), two_polygons[5].get_point())
 
+            # точки для двух полигонов
             for i, point in enumerate(two_polygons):
                 self.vert.append(point.get_point())
                 if (i / 3 >= 1):
                     self.normal.append(firnormal)
                 else:
                     self.normal.append(secnormal)
-            two_polygons = self.get_points_from_window()
+            two_polygons = self._get_points_from_window()
 
-        return self.vert, self.normal
+        vertices = np.array(self.vert, dtype=np.float32)
+        normals = np.array(self.normal, dtype=np.float32)
+        return vertices, normals
 

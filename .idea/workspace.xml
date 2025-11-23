@@ -4,55 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="начала экспорта">
-      <change afterPath="$PROJECT_DIR$/Export.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_1.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_10.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_11.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_12.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_13.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_14.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_15.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_16.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_17.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_18.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_19.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_2.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_3.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_4.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_5.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_6.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_7.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_8.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_color/Map_9.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_1.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_10.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_11.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_12.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_13.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_14.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_15.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_16.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_17.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_18.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_19.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_2.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_3.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_4.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_5.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_6.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_7.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_8.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/depth_grayscale/Map_9.bmp" afterDir="false" />
+    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором">
+      <change afterPath="$PROJECT_DIR$/Read.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Export.py" beforeDir="false" afterPath="$PROJECT_DIR$/Export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object.py" beforeDir="false" afterPath="$PROJECT_DIR$/Object.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stl/file6.stl" beforeDir="false" afterPath="$PROJECT_DIR$/stl/file6.stl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Rish-Filo-guap"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rish-Filo-guap&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Rish-Filo-guap/3d_L3.git",
-    "accountId": "70992498-ec15-4d15-86b9-3b4f0444d1ff"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rish-Filo-guap/3d_L3.git&quot;,
+    &quot;accountId&quot;: &quot;70992498-ec15-4d15-86b9-3b4f0444d1ff&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -92,8 +51,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Export.executor": "Run",
     "Python.ImageTest.executor": "Run",
     "Python.Object.executor": "Run",
+    "Python.TVtest.executor": "Run",
     "Python.main.executor": "Run",
     "Python.read_file.executor": "Run",
     "Python.test.executor": "Run",
@@ -151,13 +112,22 @@
       <option name="project" value="LOCAL" />
       <updated>1762818491346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором">
+      <option name="closed" value="true" />
+      <created>1763503485734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763503485734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="что-то есть" />
     <MESSAGE value="проверяем" />
     <MESSAGE value="начала экспорта" />
-    <option name="LAST_COMMIT_MESSAGE" value="начала экспорта" />
+    <MESSAGE value="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором" />
+    <option name="LAST_COMMIT_MESSAGE" value="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором" />
   </component>
 </project>

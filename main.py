@@ -1,30 +1,22 @@
-import numpy as np
-import pygame.locals
-
-from Export import write_ascii_stl_with_normals
+from Export import write_ascii_stl
 from View import *
-from read_file import ReadFile
-
+from Read import *
 
 def main():
-    rf = ReadFile("files/DepthMap_6.dat")
-    points = rf.read_dat_file()
+    # чтение объекта
+    points = read_dat_file("files/DepthMap_6.dat")
     if(points==False):
         return
+
+    # подготовка объекта
     points.move_to_center()
     points.norm_points()
-    points.zoom_points(4)
+    vertices, normals=points.calculate_arrays()
 
-    vert, norm=points.calculate_arrays()
-    vertices = np.array(vert, dtype=np.float32)
-    normals = np.array(norm, dtype=np.float32)
-
-    write_ascii_stl_with_normals("stl/file6.stl", vertices, normals)
+    # экспорт
+    write_ascii_stl("stl/file6.stl", vertices, normals)
+    # визуализация
     show_scene(vertices, normals)
-
-    print(len(vertices))
-
-
 
 if __name__ == "__main__":
     main()
