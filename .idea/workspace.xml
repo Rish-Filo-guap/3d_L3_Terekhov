@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором">
-      <change afterPath="$PROJECT_DIR$/Read.py" afterDir="false" />
+    <list default="true" id="8fcbe3e0-1d35-4ce4-83c1-5e24a3a7d6b7" name="Changes" comment="комментарии">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Export.py" beforeDir="false" afterPath="$PROJECT_DIR$/Export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object.py" beforeDir="false" afterPath="$PROJECT_DIR$/Object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stl/file6.stl" beforeDir="false" afterPath="$PROJECT_DIR$/stl/file6.stl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,7 @@
     "Python.ImageTest.executor": "Run",
     "Python.Object.executor": "Run",
     "Python.TVtest.executor": "Run",
+    "Python.View.executor": "Run",
     "Python.main.executor": "Run",
     "Python.read_file.executor": "Run",
     "Python.test.executor": "Run",
@@ -120,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763503485734</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="комментарии">
+      <option name="closed" value="true" />
+      <created>1763910928194</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763910928194</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +131,7 @@
     <MESSAGE value="проверяем" />
     <MESSAGE value="начала экспорта" />
     <MESSAGE value="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором" />
-    <option name="LAST_COMMIT_MESSAGE" value="близится конец, добавлены нормали в визуализаторе и поправлены координаты, разделение по файлам, экспорт совпадает с визуализатором" />
+    <MESSAGE value="комментарии" />
+    <option name="LAST_COMMIT_MESSAGE" value="комментарии" />
   </component>
 </project>
