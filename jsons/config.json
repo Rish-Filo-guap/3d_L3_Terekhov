@@ -1,16 +1,9 @@
 {
   "depth_path": "files/DepthMap_6.dat",
-  "save_image_path": "export/images/im1.bmp",
-  "camera_position": {
-    "x": 10,
-    "y": 10,
-    "z": 10
-  },
-  "light_position": {
-    "x": 0,
-    "y": 0,
-    "z": 10
-  },
-  "reflection_model": "Ламберт",
-  "save_model_path": "export/models/model1.stl"
+  "save_image_path": "export/images/image3.bmp",
+  "camera_position": [0, 0,-1],
+  "light_position": [0.3,0.5,-1],
+  "reflection_model": "Торенс-Сперроу",
+
+  "save_model_path": "export/models/m3.ply"
 }

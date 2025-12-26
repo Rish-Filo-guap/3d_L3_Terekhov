@@ -1,31 +1,41 @@
+import copy
 import math
 import numpy as np
 
 
 class Point:
     def __init__(self, x, y, z):
+        self.color = None
+        self.normal = None
         self.x = x
         self.y = y
         self.z = z
 
     def zoom(self, k):
-        if(self.z!=0):
+        if self.z!=0:
             self.x = self.x * k
             self.y = self.y * k
             self.z = self.z * k
     def move(self, point):
-        if(self.z!=0):
+        if self.z!=0:
             self.x = self.x + point.x
             self.y = self.y + point.y
             self.z = self.z + point.z
     def get_point(self):
         return [self.x, self.y, self.z]
+    def set_normal(self, normal):
+        self.normal=normal
+    def set_color(self, color):
+        self.color=color
+    def get_color(self):
+        return self.color
+
 
 
 
 class Points:
     def __init__(self, width, height, points):
-        self.normal = None
+        # self.normal = None
         self.vert = None
         self.width = width
         self.height = height
@@ -59,7 +69,7 @@ class Points:
         while (True):
             tmp=self._move_window()
             if(tmp!=None):
-                return tmp
+                return copy.deepcopy(tmp)
             if(tmp==False):
                 return False
 
@@ -98,9 +108,9 @@ class Points:
             normal = [normal[0] / length, -normal[1] / length, -normal[2] / length]
         return normal
 
-    def calculate_arrays(self):
+    def calculate_vertices_and_normals(self):
         self.vert = []
-        self.normal = []
+        # self.normal = []
 
         self._start_window()
         two_polygons = self._get_points_from_window()
@@ -108,17 +118,25 @@ class Points:
             # нормали двух полигонов
             firnormal=self._calculate_normal(two_polygons[0].get_point(), two_polygons[1].get_point(),two_polygons[2].get_point())
             secnormal=self._calculate_normal(two_polygons[3].get_point(), two_polygons[4].get_point(), two_polygons[5].get_point())
+            for i, point in enumerate(two_polygons, 0):
+                if i<3:
+                    point.set_normal(firnormal)
+                else:
+                    point.set_normal(secnormal)
+
 
             # точки для двух полигонов
-            for i, point in enumerate(two_polygons):
-                self.vert.append(point.get_point())
-                if (i / 3 >= 1):
-                    self.normal.append(firnormal)
-                else:
-                    self.normal.append(secnormal)
+            for point in two_polygons:
+                self.vert.append(point)
+
+
             two_polygons = self._get_points_from_window()
 
-        vertices = np.array(self.vert, dtype=np.float32)
-        normals = np.array(self.normal, dtype=np.float32)
-        return vertices, normals
+        # vertices = np.array(self.vert, dtype=np.float32)
+        # normals = np.array(self.normal, dtype=np.float32)
+        # return vertices, normals
+    def calculate_light(self, method, vectors):
+        for point in self.vert:
+            point.set_color(method(point.normal, vectors))
+
 

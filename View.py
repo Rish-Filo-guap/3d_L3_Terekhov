@@ -1,5 +1,7 @@
 import math
+import random
 
+import numpy
 import pygame
 import pygame.locals
 from OpenGL.GL import *
@@ -79,11 +81,32 @@ class Camera:
 def display_camera_info(camera):
     info = f"Camera: Pos({camera.position_x:.1f}, {camera.position_y:.1f}, {camera.position_z:.1f}) Rot({camera.rotation_x:.1f}, {camera.rotation_y:.1f})"
     pygame.display.set_caption(info)
-    
+
+
+def generate_random_colors_per_vertex(num_vertices):
+    """Генерирует случайные цвета для каждой вершины"""
+    colors = []
+    for _ in range(num_vertices):
+        r = random.uniform(0.0, 1.0)
+        g = random.uniform(0.0, 1.0)
+        b = random.uniform(0.0, 1.0)
+        colors.append((r, g, b))
+
+    # Преобразуем в плоский массив float
+    flat_colors = []
+    for color in colors:
+        flat_colors.extend(color)
+
+    return flat_colors
+
+
 # отрисовка сцены
-def show_scene(vertices, normals):
+def show_scene(vertices, normals, colors, light_pos):
+    # colors = generate_random_colors_per_vertex(len(vertices))
     vbo_v = vbo.VBO(vertices)
     vbo_n = vbo.VBO(normals)
+    vbo_c = vbo.VBO(colors)
+
 
     pygame.init()
     display = (1200, 800)
@@ -93,6 +116,7 @@ def show_scene(vertices, normals):
     glEnable(GL_DEPTH_TEST)
 
     camera = Camera()
+    # light_pos = [-1, 0, 1, 0.0]
 
     clock = pygame.time.Clock()
 
@@ -110,52 +134,35 @@ def show_scene(vertices, normals):
 
         camera.apply_transform()
 
-        # освещение
-        glEnable(GL_LIGHTING)
-        glEnable(GL_LIGHT0)
-        glEnable(GL_LIGHT1)
-        glEnable(GL_LIGHT3)
-        glEnable(GL_LIGHT4)
-
-        light_pos = [5, 5, 5, 0.0]
-        light_pos2 = [-5, 0, 5, 0.0]
-        light_pos3 = [-5, -5, -5, 0.0]
-        light_pos4 = [5, 0, -5, 0.0]
-
-        # точки в местах освещения
         glPointSize(20)
         glBegin(GL_POINTS)
-        glVertex3f(light_pos2[0], light_pos2[1], light_pos2[2])
-        glVertex3f(light_pos[0], light_pos[1], light_pos[2])
-        glVertex3f(light_pos3[0], light_pos3[1], light_pos3[2])
-        glVertex3f(light_pos4[0], light_pos4[1], light_pos4[2])
+        glVertex3f(-light_pos[0], -light_pos[1], -light_pos[2])
         glEnd()
-
-        glLightfv(GL_LIGHT0, GL_POSITION, light_pos)
-        glLightfv(GL_LIGHT1, GL_POSITION, light_pos2)
-        glLightfv(GL_LIGHT3, GL_POSITION, light_pos3)
-        glLightfv(GL_LIGHT4, GL_POSITION, light_pos4)
-
         # Рисуем сцену
 
         glEnableClientState(GL_VERTEX_ARRAY)
-        glEnableClientState(GL_NORMAL_ARRAY)
+        # glEnableClientState(GL_NORMAL_ARRAY)
         glEnableClientState(GL_COLOR_ARRAY)
+        # glEnableClientState(GL_COLOR_ARRAY)
 
         # полигоны
         vbo_v.bind()
         glVertexPointer(3, GL_FLOAT, 0, vbo_v)
         vbo_v.unbind()
 
-        # нормали
-        vbo_n.bind()
-        glNormalPointer(GL_FLOAT, 0, vbo_n)
-        vbo_n.unbind()
+        # # нормали
+        # vbo_n.bind()
+        # glNormalPointer(GL_FLOAT, 0, vbo_n)
+        # vbo_n.unbind()
+
+        vbo_c.bind()
+        glColorPointer(3, GL_FLOAT, 0, vbo_c)
+        vbo_c.unbind()
 
         glDrawArrays(GL_TRIANGLES, 0, len(vertices))
 
         glDisableClientState(GL_COLOR_ARRAY)
-        glDisableClientState(GL_NORMAL_ARRAY)
+        # glDisableClientState(GL_NORMAL_ARRAY)
         glDisableClientState(GL_VERTEX_ARRAY)
 
         # Обновляем дисплей
